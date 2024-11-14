@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bookmark</title>
+    <link rel="icon" href="./imge/red-bookmark-icon.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet"
+            type="text/css" />
+    <link rel="icon" href="./images/bookmark.png" />
+    <link rel="stylesheet" href="./style/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+ 
+  </head>
+  <body>
+    <main class=" py-5 position-relative">
+      <div
+        class="container d-flex flex-column justify-content-center align-items-center"
+      >
+        <h1 class="py-2 position-relative">Bookmarker</h1>
+        <div
+          class="bookmark-body w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4"
+        >
+          <h2 class="text-black ">
+            <i class="fa fa-bookmark text-danger-emphasis" aria-hidden="true"></i>
+            Bookmark your favorite sites
+            <i class="fa fa-bookmark text-danger-emphasis" aria-hidden="true"></i>
+        </h2>
+          <div
+            class="site-name w-100 d-flex flex-column justify-content-center"
+          >
+            <label for="bookmarkName" class="pb-2 h5">
+                <i class="fa-solid fa-book-bookmark"></i>
+              Site Name</label
+            >
+            <input
+              type="text"
+              placeholder="Bookmark Name"
+              class="form-control"
+              id="bookmarkName"
+            />
+          </div>
+          <div class="site-url w-100 d-flex flex-column justify-content-center">
+            <label for="bookmarkURL" class="pb-2 h5">
+                <i class="fa-solid fa-link"></i> Site URL</label
+            >
+            <input
+              type="url"
+              placeholder="Website URL"
+              class="form-control"
+              id="bookmarkURL"
+            />
+          </div>
+          <button class="btn btn-submit px-5" id="submitBtn">Submit</button>
+        </div>
+        <table class="table mt-4 text-center bg-light">
+          <thead>
+            <th class="text-capitalize text-bg-success">index</th>
+            <th class="text-capitalize text-bg-success">Website Name</th>
+            <th class="text-capitalize text-bg-success">Visit</th>
+            <th class="text-capitalize text-bg-success">Delete</th>
+          </thead>
+          <tbody id="tableContent"></tbody>
+        </table>
+      </div>
+      <div
+        class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none"
+      >
+        <div class="box-conent bg-dark p-4 rounded-4 shadow-sm">
+          <header
+            class="box-header w-100 d-flex justify-content-between align-items-center mb-4"
+          >
+            <div class="circles d-flex m-auto fs-5">
+                <i class="fa fa-exclamation-triangle text-warning fs-1" aria-hidden="true"></i>
+            </div>
+            <button class="btn border-0 accordion-body" id="closeBtn">
+                <i class="fa fa-times-circle text-danger fs-5" aria-hidden="true"></i>
+            </button>
+          </header>
+          <p class="m-0 pb-2 text-warning">
+            Site Name or Url is not valid, Please follow the rules below :
+          </p>
+          <ol class="rules list-unstyled m-0 text-warning">
+            <li>
+                <i class="fa fa-arrow-circle-right text-success" aria-hidden="true"></i>
+                contain at least 3 characters
+            </li>
+            <li>
+                <i class="fa fa-arrow-circle-right text-success" aria-hidden="true"></i>
+                Site URL must be a
+              valid one
+            </li>
+          </ol>
+        </div>
+      </div>
+    </main>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
